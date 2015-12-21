@@ -1,11 +1,10 @@
 package uk.co.rockspin.androiddi.modules.fragments;
 
-
 import android.support.v4.app.Fragment;
-
 import dagger.Module;
 import dagger.Provides;
 import rx.subscriptions.CompositeSubscription;
+import uk.co.rockspin.androiddi.annotations.ForFragment;
 import uk.co.rockspin.androiddi.annotations.PerFragment;
 
 @Module public class SupportFragmentModule {
@@ -16,12 +15,11 @@ import uk.co.rockspin.androiddi.annotations.PerFragment;
         this.fragment = fragment;
     }
 
-    @Provides @PerFragment
-    Fragment getFragment() {
+    @Provides @PerFragment Fragment getFragment() {
         return fragment;
     }
 
-    @Provides @PerFragment CompositeSubscription getCompositeSubscription() {
+    @Provides @PerFragment @ForFragment CompositeSubscription getCompositeSubscription() {
         return new CompositeSubscription();
     }
 }

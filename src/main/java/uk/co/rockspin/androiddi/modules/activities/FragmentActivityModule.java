@@ -2,7 +2,6 @@ package uk.co.rockspin.androiddi.modules.activities;
 
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-
 import dagger.Module;
 import dagger.Provides;
 
@@ -17,8 +16,7 @@ import dagger.Provides;
         this.activity = activity;
     }
 
-    public @Provides
-    FragmentManager fragmentManager() {
+    public @Provides FragmentManager fragmentManager() {
         return activity.getSupportFragmentManager();
     }
 }

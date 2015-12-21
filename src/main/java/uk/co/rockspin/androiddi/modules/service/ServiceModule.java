@@ -1,8 +1,6 @@
 package uk.co.rockspin.androiddi.modules.service;
 
-
 import android.app.Service;
-
 import dagger.Module;
 import dagger.Provides;
 import rx.subscriptions.CompositeSubscription;

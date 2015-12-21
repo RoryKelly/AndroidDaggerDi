@@ -1,9 +1,8 @@
 package uk.co.rockspin.androiddi.components.activities;
 
 
-import dagger.Component;
+import dagger.Subcomponent;
 import uk.co.rockspin.androiddi.annotations.PerActivity;
-import uk.co.rockspin.androiddi.components.application.IAbstractApplicationComponent;
 import uk.co.rockspin.androiddi.modules.activities.AppCompatActivityModule;
 
 /**
@@ -11,6 +10,6 @@ import uk.co.rockspin.androiddi.modules.activities.AppCompatActivityModule;
  * should extend this component.
  */
 @PerActivity // Subtypes of ActivityComponent should be decorated with @PerActivity.
-@Component(dependencies = IAbstractApplicationComponent.class, modules = { AppCompatActivityModule.class }) public interface IAbstractAppCompatActivityComponent
+@Subcomponent(modules = { AppCompatActivityModule.class }) public interface IAbstractAppCompatActivityComponent
     extends IAbstractFragmentActivityComponent {
 }

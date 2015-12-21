@@ -1,8 +1,6 @@
 package uk.co.rockspin.androiddi.modules.activities;
 
-
 import android.support.v7.app.AppCompatActivity;
-
 import dagger.Module;
 import dagger.Provides;
 import uk.co.rockspin.androiddi.annotations.PerActivity;
@@ -18,8 +16,7 @@ import uk.co.rockspin.androiddi.annotations.PerActivity;
         this.activity = activity;
     }
 
-    public @Provides @PerActivity
-    AppCompatActivity appCompatActivity() {
+    public @Provides @PerActivity AppCompatActivity appCompatActivity() {
         return activity;
     }
 

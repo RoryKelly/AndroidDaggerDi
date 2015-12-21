@@ -6,10 +6,10 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
-
 import dagger.Module;
 import dagger.Provides;
 import rx.subscriptions.CompositeSubscription;
+import uk.co.rockspin.androiddi.annotations.ForActivity;
 import uk.co.rockspin.androiddi.annotations.PerActivity;
 
 /**
@@ -27,11 +27,11 @@ import uk.co.rockspin.androiddi.annotations.PerActivity;
         return activity;
     }
 
-    public @Provides @PerActivity CompositeSubscription compositeSubscription() {
+    public @Provides @PerActivity @ForActivity CompositeSubscription compositeSubscription() {
         return new CompositeSubscription();
     }
 
-    public @Provides LayoutInflater layoutInflater() {
+    public @Provides @PerActivity @ForActivity LayoutInflater layoutInflater() {
         return LayoutInflater.from(activity);
     }
 

@@ -1,7 +1,8 @@
 package uk.co.rockspin.androiddi.annotations;
 
+import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
-import javax.inject.Scope;
+import javax.inject.Qualifier;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
@@ -10,5 +11,5 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * conform to the life of the activity to be memoized in the
  * correct component.
  */
-@Scope @Retention(RUNTIME) public @interface PerService {
+@Qualifier @Documented @Retention(RUNTIME) public @interface ForApplication {
 }

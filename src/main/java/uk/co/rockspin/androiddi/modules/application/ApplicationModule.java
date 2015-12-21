@@ -5,9 +5,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
-
 import dagger.Module;
 import dagger.Provides;
+import uk.co.rockspin.androiddi.annotations.ForApplication;
+import uk.co.rockspin.androiddi.annotations.PerApplication;
 
 import static uk.co.rockspin.guandroid.Preconditions.checkNotNull;
 
@@ -19,15 +20,15 @@ import static uk.co.rockspin.guandroid.Preconditions.checkNotNull;
         this.context = checkNotNull(context, "Context cannot be null");
     }
 
-    @Provides public Context providesContext() {
+    @Provides @PerApplication public Context providesContext() {
         return context;
     }
 
-    @Provides public SharedPreferences providesSharedPreferences() {
+    @Provides @PerApplication public SharedPreferences providesSharedPreferences() {
         return PreferenceManager.getDefaultSharedPreferences(context);
     }
 
-    @Provides public LayoutInflater providesLayoutInflater() {
+    @Provides @PerApplication @ForApplication public LayoutInflater providesLayoutInflater() {
         return LayoutInflater.from(context);
     }
 }
