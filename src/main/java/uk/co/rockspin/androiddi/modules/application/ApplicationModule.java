@@ -20,7 +20,7 @@ import static uk.co.rockspin.guandroid.Preconditions.checkNotNull;
         this.context = checkNotNull(context, "Context cannot be null");
     }
 
-    @Provides @PerApplication public Context providesContext() {
+    @Provides @PerApplication @ForApplication public Context providesContext() {
         return context;
     }
 

@@ -23,7 +23,12 @@ import uk.co.rockspin.androiddi.annotations.PerActivity;
     }
 
     public @Provides @PerActivity
-    Activity activity() {
+     Activity activity() {
+        return activity;
+    }
+
+    public @Provides @PerActivity @ForActivity
+    Context context() {
         return activity;
     }
 
