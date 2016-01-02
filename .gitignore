@@ -26,3 +26,4 @@ proguard/
 # Log Files
 *.log
 androiddi.iml
+.DS_Store
