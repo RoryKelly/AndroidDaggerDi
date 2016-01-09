@@ -10,7 +10,7 @@ import dagger.Provides;
 import uk.co.rockspin.androiddi.annotations.ForApplication;
 import uk.co.rockspin.androiddi.annotations.PerApplication;
 
-import static uk.co.rockspin.guandroid.Preconditions.checkNotNull;
+import static uk.co.rockspin.androiddi.Preconditions.checkNotNull;
 
 @Module public class ApplicationModule {
 
