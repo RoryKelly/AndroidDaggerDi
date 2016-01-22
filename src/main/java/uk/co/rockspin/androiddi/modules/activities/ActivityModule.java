@@ -8,7 +8,6 @@ import android.content.res.Resources;
 import android.view.LayoutInflater;
 import dagger.Module;
 import dagger.Provides;
-import rx.subscriptions.CompositeSubscription;
 import uk.co.rockspin.androiddi.annotations.ForActivity;
 import uk.co.rockspin.androiddi.annotations.PerActivity;
 
@@ -30,10 +29,6 @@ import uk.co.rockspin.androiddi.annotations.PerActivity;
     public @Provides @PerActivity @ForActivity
     Context context() {
         return activity;
-    }
-
-    public @Provides @PerActivity @ForActivity CompositeSubscription compositeSubscription() {
-        return new CompositeSubscription();
     }
 
     public @Provides @PerActivity @ForActivity LayoutInflater layoutInflater() {
