@@ -10,6 +10,6 @@ import uk.co.rockspin.androiddi.modules.activities.AppCompatActivityModule;
  * should extend this component.
  */
 @PerActivity // Subtypes of ActivityComponent should be decorated with @PerActivity.
-@Subcomponent(modules = { AppCompatActivityModule.class }) public interface IAbstractAppCompatActivityComponent
-    extends IAbstractFragmentActivityComponent {
+@Subcomponent(modules = { AppCompatActivityModule.class }) public interface AbstractAppCompatActivityComponent
+    extends AbstractFragmentActivityComponent {
 }

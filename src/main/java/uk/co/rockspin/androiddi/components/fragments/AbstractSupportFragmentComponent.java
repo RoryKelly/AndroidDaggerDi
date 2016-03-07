@@ -7,10 +7,10 @@ import uk.co.rockspin.androiddi.annotations.PerFragment;
 import uk.co.rockspin.androiddi.modules.fragments.SupportFragmentModule;
 
 /**
- * Should depend on a specific implementation of IAbstractActivityComponent.
+ * Should depend on a specific implementation of AbstractActivityComponent.
  */
 @PerFragment @Subcomponent(modules = SupportFragmentModule.class)
-public interface IAbstractSupportFragmentComponent {
+public interface AbstractSupportFragmentComponent {
 
     @ForActivity LayoutInflater layoutInflater();
 }
